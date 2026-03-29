@@ -1,0 +1,191 @@
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --primary-accent: #00d2ff;
+    --hero-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    --contact-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --transition-speed: 0.4s;
+}
+
+/* Dark Mode Variables Override */
+[data-bs-theme="dark"] {
+    --glass-bg: rgba(0, 0, 0, 0.2);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: background var(--transition-speed), color var(--transition-speed);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.navbar {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.glass-card,
+.skill-card,
+.project-card,
+.contact-card {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#theme-toggle {
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+/* =========================================
+        3. Header Sections (Hero, About, Projects)
+   ========================================= */
+.hero-section,
+.about-header,
+.projects-header,
+.contact-header {
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+    margin-bottom: 50px;
+}
+
+.hero-section,
+.about-header {
+    background: var(--hero-gradient);
+}
+
+.projects-header {
+    background: var(--secondary-gradient);
+}
+
+.contact-header {
+    background: var(--contact-gradient);
+}
+
+/* Profile Photo Styling */
+.hero-section img {
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+
+.hero-section img:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+/* =========================================
+        Skills & Icons (About Page)
+   ========================================= */
+.icon-box {
+    width: 65px;
+    height: 65px;
+    background: var(--primary-accent);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.6rem;
+    box-shadow: 0 8px 20px rgba(0, 210, 255, 0.3);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-accent) !important;
+}
+
+.project-card {
+    overflow: hidden;
+    height: 100%;
+}
+
+.project-img-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.15);
+}
+
+.btn-github {
+    background: #24292e;
+    color: white;
+}
+
+.btn-github:hover {
+    background: #000;
+    color: white;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: inherit;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    transition: 0.3s;
+}
+
+.info-item:hover {
+    background: rgba(0, 210, 255, 0.1);
+    transform: translateX(10px);
+    border-color: var(--primary-accent);
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 12px;
+    color: inherit;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+    color: inherit;
+}
+
+footer {
+    background: #111;
+    color: #888;
+    padding: 40px 0;
+    margin-top: 80px;
+}

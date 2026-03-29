@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Amr Mohamed</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; transition: 0.4s; }
+        .about-header {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            color: white;
+            padding: 80px 0;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+        .skill-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            padding: 2rem;
+            height: 100%;
+        }
+        .skill-card:hover {
+            transform: translateY(-10px);
+            background: rgba(0, 210, 255, 0.1);
+            border-color: #00d2ff;
+        }
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: #00d2ff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        [data-bs-theme="dark"] .skill-card { background: rgba(255, 255, 255, 0.03); }
+    </style> 
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">AMR<span class="text-primary">.</span></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="about-header text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Who Am I?</h1>
+            <p class="lead">A multi-disciplinary creator driven by technology and design.</p>
+        </div>
+    </header>
+
+    <section class="container my-5 py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">My Expertise</h2>
+            <div class="mx-auto bg-primary" style="height: 4px; width: 60px; border-radius: 2px;"></div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="skill-card shadow-sm">
+                    <div class="icon-box"><i class="bi bi-code-square"></i></div>
+                    <h4>Web Developer</h4>
+                    <p class="text-muted">Full-stack solutions using Laravel, Next.js, Gsap , Three.js || and modern CSS frameworks like Bootstrap , Tailwind.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="skill-card shadow-sm">
+                    <div class="icon-box"><i class="bi bi-megaphone"></i></div>
+                    <h4>Content Creator</h4>
+                    <p class="text-muted">Crafting engaging stories and educational content for YouTube and TikTok audiences.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="skill-card shadow-sm">
+                    <div class="icon-box"><i class="bi bi-film"></i></div>
+                    <h4>Video Editing</h4>
+                    <p class="text-muted">Professional post-production with a focus on cinematic flow and storytelling.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="skill-card shadow-sm">
+                    <div class="icon-box"><i class="bi bi-palette"></i></div>
+                    <h4>Graphic Designer</h4>
+                    <p class="text-muted">Visual branding, UI/UX design, and creating high-impact digital assets.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="skill-card shadow-sm">
+                    <div class="icon-box"><i class="bi bi-cpu"></i></div>
+                    <h4>AI Trainer</h4>
+                    <p class="text-muted">Specialized in prompt engineering and fine-tuning AI models for creative workflows.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="skill-card shadow-sm">
+                    <div class="icon-box"><i class="bi bi-share"></i></div>
+                    <h4>Social Media</h4>
+                    <p class="text-muted">Managing digital presence and executing growth strategies across platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2026 Amr Mohamed. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+    </script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

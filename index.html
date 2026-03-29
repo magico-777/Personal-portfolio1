@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ahmed Amr Mohamed | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --primary-accent: #00d2ff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.4s ease;
+            scroll-behavior: smooth;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+        }
+
+        .navbar {
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        .hero-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            transition: 0.3s;
+        }
+
+        #theme-icon {
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-accent);
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">AMR<span class="text-primary">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <i class="bi bi-moon-stars-fill" id="theme-toggle"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container py-5">
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-md-7 mb-4 mb-md-0">
+                    <h1 class="display-2 fw-bold mb-3">Ahmed Amr Mohamed</h1>
+                    <p class="lead mb-4 fs-3">Full-Stack Developer & Ai Trainer & Video Editing Content Creator</p>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3">
+                        <a href="projects.html" class="btn btn-primary btn-lg px-5 rounded-pill">View Work</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg px-5 rounded-pill">Hire Me</a>
+                    </div>
+                </div>
+                <div class="col-md-5 text-center">
+                    <img src="./images/انا.png" alt="Amr Mohamed Profile Photo"
+                        class="img-fluid rounded-circle shadow-lg border border-4 border-light"
+                        style="max-width: 400px; object-fit: cover; aspect-ratio: 1/1;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container my-5 py-5">
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="p-4 glass-card shadow-sm h-100">
+                    <i class="bi bi-code-slash fs-1 text-primary"></i>
+                    <h3 class="mt-3">Web Development</h3>
+                    <p class="text-muted">Building responsive, high-performance websites using modern tech stacks.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 glass-card shadow-sm h-100">
+                    <i class="bi bi-layers fs-1 text-primary"></i>
+                    <h3 class="mt-3">UI/UX Design</h3>
+                    <p class="text-muted">Focusing on dark mode aesthetics and intuitive user experiences.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 glass-card shadow-sm h-100">
+                    <i class="bi bi-phone fs-1 text-primary"></i>
+                    <h3 class="mt-3">App Conversion</h3>
+                    <p class="text-muted">Transforming web projects into seamless mobile applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2026 Magicoooo . Built with html and Bootstrap.
+            </p>
+            <div class="mt-2">
+                <a href="https://github.com/magico-777" class="text-white me-3"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/ahmed-magico-3a939939b/" class="text-white me-3"><i
+                        class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-bs-theme', savedTheme);
+        updateIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            htmlElement.setAttribute('data-bs-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        function updateIcon(theme) {
+            themeToggle.className = theme === 'light' ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill text-warning';
+        }
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.glass-card');
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                if (cardTop < window.innerHeight - 100) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+    </script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
