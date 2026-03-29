@@ -137,8 +137,7 @@
                             </div>
                             <div class="col-12">
                                 <button type="submit" id="submit-btn" class="btn btn-primary btn-lg w-100 rounded-pill mt-3">
-                                    <i class="bi bi-send-fill me-2"></i> Send Message
-                                </button>
+                                    <i class="bi bi-send-fill me-2"></i> Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -151,7 +150,7 @@
     <script>
         
         (function() {
-            emailjs.init("YOUR_PUBLIC_KEY"); 
+            emailjs.init("OC1EeviU1oeBvGfkt"); 
         })();
 
         const contactForm = document.getElementById('contact-form');
@@ -164,7 +163,7 @@
             btn.disabled = true;
 
            
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            emailjs.sendForm('service_hky5q4j', 'template_wteeuyt', this)
                 .then(function() {
                     responseMsg.innerHTML = "✅ Message Sent Successfully!";
                     responseMsg.className = "mt-3 text-center text-success fw-bold";
